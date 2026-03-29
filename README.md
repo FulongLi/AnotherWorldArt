@@ -2,6 +2,8 @@
 
 **AnotherWorldArt** is a gallery for **Another World**, a game built on **Spirit Connect** technology. It collects **AI-generated concept art**—environments, characters, and visual exploration—that supports the look and world of *Another World*.
 
+**Live site:** [https://fulongli.github.io/AnotherWorldArt/](https://fulongli.github.io/AnotherWorldArt/)
+
 This is a single static page: open `index.html` to browse. The gallery supports a responsive grid, click-to-focus, keyboard navigation, and deep links with `#piece-id`. By default only the logo at `images/logo_svg.svg` is listed; add more files under `images/` and register them in the `data` array.
 
 ## Local preview
