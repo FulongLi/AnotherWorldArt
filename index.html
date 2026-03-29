@@ -33,12 +33,11 @@
     .box {
       position: absolute;
       overflow: hidden;
-      background-color: rgba(10, 18, 38, 0.94);
+      background-color: #fff;
       border-radius: 16px;
       box-shadow:
-        0 0 0 1px rgba(46, 188, 254, 0.18),
-        0 0 28px rgba(46, 188, 254, 0.07),
-        0 4px 32px 0 rgba(0, 0, 0, 0.55);
+        0 0 0 1px rgba(0, 0, 0, 0.06),
+        0 4px 24px rgba(0, 0, 0, 0.1);
       background-size: 100%; /* low-res image added as background-image in JS later. Saves 1 DOM node */
       background-repeat: no-repeat; /* just in case of floating point whatever */
     }
@@ -52,7 +51,7 @@
       box-sizing: border-box;
       padding: 8px 12px 0px 12px;
       font-family: "DM Sans", system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, "Noto Sans", sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji"; /* same as midjourney's */
-      color: rgb(186, 210, 232);
+      color: rgb(55, 65, 81);
       font-size: 14px;
       cursor: text; /* overrides document's cursor when needed (see JS code below) */
       /* for programmatic multiline clamping */
@@ -61,7 +60,7 @@
     }
     .prompt:before {
       content: '❝';
-      color: rgba(46, 188, 254, 0.55);
+      color: rgba(15, 23, 42, 0.35);
       padding-right: 2px;
     }
   </style>
