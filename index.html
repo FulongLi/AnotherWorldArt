@@ -176,6 +176,7 @@ let data; {
   data = [
     /* logo_svg.svg is 44×36; w/h scaled ~20× for grid layout (same 11:9 aspect) */
     {id: 'logo', w: 880, h: 720, prompt: `Another World — Spirit Connect logo`, src: 'images/logo_svg.svg'},
+    {id: 'dragon', w: 1024, h: 1024, prompt: `Another World — dragon concept art`, src: 'images/dragon.svg'},
   ].map((d, i) => {
     const ar = d.w / d.h
     const sizeX = Math.min(d.w, boxMaxSizeX, imgMaxSizeY * ar)

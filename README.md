@@ -4,7 +4,7 @@
 
 **Live site:** [https://fulongli.github.io/AnotherWorldArt/](https://fulongli.github.io/AnotherWorldArt/)
 
-This is a single static page: open `index.html` to browse. The gallery supports a responsive grid, click-to-focus, keyboard navigation, and deep links with `#piece-id`. By default only the logo at `images/logo_svg.svg` is listed; add more files under `images/` and register them in the `data` array.
+This is a single static page: open `index.html` to browse. The gallery supports a responsive grid, click-to-focus, keyboard navigation, and deep links with `#piece-id`. The gallery ships with the logo (`images/logo_svg.svg`) and a dragon piece (`images/dragon.svg`); add more files under `images/` and register them in the `data` array.
 
 ## Local preview
 
