@@ -174,8 +174,8 @@ let data; {
   const {cols, boxMaxSizeX} = colsBoxMaxSizeXF(windowSizeX)
   const imgMaxSizeY = boxMaxSizeX + 100 // TODO: adjust this better
   data = [
-    /* logo_svg.svg 实为 44×36；w/h 按约 20 倍放大仅用于网格排版，保持 11:9 */
-    {id: 'logo', w: 880, h: 720, prompt: `Another World · Spirit Connect 标志`, src: 'images/logo_svg.svg'},
+    /* logo_svg.svg is 44×36; w/h scaled ~20× for grid layout (same 11:9 aspect) */
+    {id: 'logo', w: 880, h: 720, prompt: `Another World — Spirit Connect logo`, src: 'images/logo_svg.svg'},
   ].map((d, i) => {
     const ar = d.w / d.h
     const sizeX = Math.min(d.w, boxMaxSizeX, imgMaxSizeY * ar)
