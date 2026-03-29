@@ -7,6 +7,6 @@
     </linearGradient>
   </defs>
   <rect width="1920" height="1080" fill="url(#v)"/>
-  <text x="960" y="520" text-anchor="middle" fill="#71717a" font-family="system-ui,sans-serif" font-size="30">16:9 qbÔ‹</text>
-  <text x="960" y="570" text-anchor="middle" fill="#52525b" font-family="system-ui,sans-serif" font-size="16">UI ¤’eê chenglou.github.io</text>
+  <text x="960" y="520" text-anchor="middle" fill="#71717a" font-family="system-ui,sans-serif" font-size="30">16:9 concept</text>
+  <text x="960" y="565" text-anchor="middle" fill="#52525b" font-family="system-ui,sans-serif" font-size="15">Gallery UI adapted from chenglou.github.io</text>
 </svg>
