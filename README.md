@@ -1,56 +1,32 @@
 # AnotherWorldArt
 
-**AnotherWorldArt** is a small static gallery for **Another World**, a game project built around **Spirit Connect** technology. This site is meant to collect **AI-generated concept art**—environments, characters, and visual ideas—that inform the look and feel of *Another World*. The concepts here grow out of the same fiction and design pillars as the Spirit Connect–driven game.
+《**Another World**》的 AI 概念图展示站，隶属于 **Spirit Connect** 技术路线下的游戏美术与世界观探索。这里集中呈现由 AI 辅助生成的场景、角色与视觉概念，用于统一《Another World》的审美方向。
 
-The page itself is a single `index.html`: responsive grid, spring-based motion, focused “carousel” mode, keyboard navigation, URL hashes per piece, and light DOM virtualization. That interaction layer is adapted from [chenglou/chenglou.github.io](https://github.com/chenglou/chenglou.github.io); see **Credits** below for upstream licensing.
+单页静态站点：打开 `index.html` 即可浏览；画廊支持网格浏览、点击放大、键盘切换与 `#作品id` 链接直达。当前默认仅展示 `images/logo_svg.svg` 标志，其余概念图请自行放入 `images/` 并在 `data` 中登记。
 
-## License
+## 本地预览
 
-Original material in this repository (your images, copy, and project-specific changes) is under the [MIT License](LICENSE). Gallery mechanics derived from Cheng Lou’s project remain subject to that project’s terms—check [chenglou/chenglou.github.io](https://github.com/chenglou/chenglou.github.io) before redistributing only their code.
-
-## Run locally
-
-No build step. Open `index.html` in a browser, or serve the repo root:
+无需构建。可直接双击打开 `index.html`，或在仓库根目录启动静态服务：
 
 ```bash
 npx serve .
 ```
 
-```bash
-python -m http.server 8080
-```
+## 添加作品
 
-## Add concept art
+1. 将图片放入 `images/`（推荐 webp / png / svg）。  
+2. 在 `index.html` 的 `data` 数组中增加一项：`id`（唯一，用于网址哈希）、`w`、`h`（像素尺寸，影响比例与布局）、`prompt`（说明文字）、`src`（路径）。  
 
-1. Add files under `images/` (e.g. `images/realm-gate.webp`).
-2. Append an object to the `data` array in `index.html`. Each entry needs a unique `id` (used in URLs as `#your-id`), `w`, `h`, `prompt` (caption), and `src`.
+可选字段 **`thumb`**：列表缩略图；不填则缩略与全屏共用 `src`。
 
-```javascript
-{
-  id: 'realm-gate',
-  w: 1920,
-  h: 1080,
-  prompt: `Concept: threshold between worlds`,
-  src: 'images/realm-gate.webp',
-},
-```
+## 部署
 
-Optional **`thumb`**: smaller image for the grid background; **`src`** is used in focused view. For **Midjourney CDN** URLs only, omit `src` and use an `id` like `uuid/0_0` (see comments in `index.html`).
+将包含 `index.html` 与 `images/` 的目录部署到任意静态托管（如 GitHub Pages）。若需要社交分享预览图，请在 `index.html` 的 `og:image` 中填写站点上的**绝对**图片地址。
 
-Placeholder SVGs in `images/` are only for layout until you replace them with real concepts.
+## 操作
 
-## Deploy (e.g. GitHub Pages)
+- 点击画格进入大图模式；**Esc** 或点击两侧空白区域回到网格。  
+- 大图模式下 **左右方向键** 切换作品。  
+- 访问 `页面地址#作品id` 可打开对应条目。
 
-Publish the folder that contains `index.html` and `images/`. For social previews, set `og:image` in `index.html` to an **absolute** URL once your site URL is fixed.
-
-## Controls
-
-- Click a tile to focus; **Escape** or click outside the side strips to return to the grid.
-- **Arrow keys** move between images when focused.
-- **`#id`** in the URL opens that piece on load.
-
-## Credits
-
-- UI patterns and render loop: [chenglou/chenglou.github.io](https://github.com/chenglou/chenglou.github.io) by Cheng Lou.
-
-Repository: [https://github.com/FulongLi/AnotherWorldArt](https://github.com/FulongLi/AnotherWorldArt)
+本仓库代码以 [MIT License](LICENSE) 授权。
