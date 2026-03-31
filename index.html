@@ -176,6 +176,10 @@ let data; {
     /* logo_svg.svg is 44×36; w/h scaled ~20× for grid layout (same 11:9 aspect) */
     {id: 'logo', w: 880, h: 720, prompt: `Another World — Spirit Connect logo`, src: 'images/logo_svg.svg'},
     {id: 'dragon', w: 1024, h: 1024, prompt: `Another World — dragon concept art`, src: 'images/dragon.svg'},
+    {id: 'long_creater', w: 1024, h: 1536, prompt: `Another World — creator / workshop concept`, src: 'images/long_creater.png'},
+    {id: 'long_light', w: 1024, h: 1024, prompt: `Another World — light & atmosphere concept`, src: 'images/long_light.png'},
+    {id: 'long_nature', w: 1024, h: 1024, prompt: `Another World — nature landscape concept`, src: 'images/long_nature.png'},
+    {id: 'long_sea', w: 1024, h: 1024, prompt: `Another World — sea & coast concept`, src: 'images/long_sea.png'},
   ].map((d, i) => {
     const ar = d.w / d.h
     const sizeX = Math.min(d.w, boxMaxSizeX, imgMaxSizeY * ar)
