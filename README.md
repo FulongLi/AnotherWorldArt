@@ -1,10 +1,10 @@
-# AnotherWorldArt
+# SCF Another World Art
 
-**AnotherWorldArt** is a gallery for **Another World**, a game built on **Spirit Connect** technology. It collects **AI-generated concept art**—environments, characters, and visual exploration—that supports the look and world of *Another World*.
+**SCF Another World Art** is a gallery for artwork from **Spirit Connect** and **Dragon Drive**. It collects concept art, environments, characters, and restored card artwork.
 
-**Live site:** [https://fulongli.github.io/AnotherWorldArt/](https://fulongli.github.io/AnotherWorldArt/)
+**Live site:** [https://fulongli.github.io/SCF-Another-World-Art/](https://fulongli.github.io/SCF-Another-World-Art/)
 
-This is a single static page: open `index.html` to browse. The gallery supports a responsive grid, click-to-focus, keyboard navigation, and deep links with `#piece-id`. The gallery ships with the logo (`images/logo_svg.svg`) and a dragon piece (`images/dragon.svg`); add more files under `images/` and register them in the `data` array.
+This is a static gallery: open `index.html` to browse. It supports a responsive grid, click-to-focus, keyboard navigation, and deep links with `#piece-id`. Gallery entries are listed in `gallery-data.js`; original artwork lives under `images/`, with small grid previews under `images/thumbnails/`.
 
 ## Local preview
 
@@ -16,10 +16,10 @@ npx serve .
 
 ## Adding artwork
 
-1. Place images in `images/` (webp, png, or svg recommended).
-2. Append an object to the `data` array in `index.html`: unique `id` (for the URL hash), `w` and `h` (pixel dimensions, used for aspect and layout), `prompt` (caption), and `src` (path).
+1. Place images in the appropriate collection under `images/` (webp, png, or svg recommended).
+2. Add an entry to `gallery-data.js`: unique `id` (for the URL hash), `w` and `h` (pixel dimensions, used for aspect and layout), `prompt` (caption), and `src` (path).
 
-Optional **`thumb`**: thumbnail for the grid; if omitted, `src` is used for both thumb and full view.
+Optional **`thumb`**: thumbnail for the grid; if omitted, `src` is used for both the thumbnail and full view. Dragon Drive entries are generated from the `dragonDriveFiles` filename list.
 
 ## Deploy
 
